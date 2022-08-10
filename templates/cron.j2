@@ -1,0 +1,21 @@
+# {{ ansible_managed }}
+{% set fmtstr='%-4s %-4s %-4s %-4s %-4s %-15s %s' %}
+
+# job definition:
+# .--------------------- minute (0 - 59)
+# |   .----------------- hour (0 - 23)
+# |   |   .------------- day of month (1 - 31)
+# |   |   |   .--------- month (1 - 12) OR jan,feb,mar,apr ...
+# |   |   |   |   .----- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |   |   |   |   |
+# *   *   *   *   *      user            command
+
+{% if item.tasks is defined and item.tasks | length > 0 %}
+{% for v in item.tasks %}
+{% if v.name is defined %}
+# task: {{ v.name }}
+{% endif %}
+{{ "" if v.state == "present" else "# " }}{{ fmtstr | format(v.minute|default('*'), v.hour|default('*'), v.day|default('*'), v.month|default('*'), v.weekday|default('*'), v.user|default('root'), v.cmdline) }}
+
+{% endfor %}
+{% endif %}

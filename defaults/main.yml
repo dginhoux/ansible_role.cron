@@ -1,0 +1,17 @@
+---
+
+# cron:
+#   - file: test
+#     state: present
+#     tasks:
+#       - name: hello
+#         state: present
+#         user: www-data
+#         minute: "*/5"
+#         hour: *
+#         day: *
+#         month: *
+#         weekday: *
+#         cmdline: echo 'hello'
+
+cron: []
