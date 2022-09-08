@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  role_name: ginhouxnet_cron
+  role_name: cron
   description: configure cron
   author: dginhoux
   company: ginhouxnet
