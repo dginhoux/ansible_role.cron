@@ -1,4 +1,4 @@
-ginhouxnet.cron
+Ansible Role : dginhoux.cron
 =========
 
 This ansible role configure cron and create files in `/etc/cron.d`
