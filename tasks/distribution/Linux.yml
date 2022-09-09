@@ -6,25 +6,23 @@
     mode: 0644
   with_items: "{{ cron }}"
   when: >
-        cron is defined
-        and
-        cron is iterable
-        and
-        item.state | default("present") == "present"
-
+    cron is defined
+    and
+    cron is iterable
+    and
+    item.state | default("present") == "present"
 
 - name: delete cron.d file(s)
   file:
     path: /etc/cron.d/{{ item.file }}
     state: absent
-  with_items: '{{ cron }}'
+  with_items: "{{ cron }}"
   when: >
-        cron is defined
-        and
-        cron is iterable
-        and
-        item.state | default("present") == "absent"
-
+    cron is defined
+    and
+    cron is iterable
+    and
+    item.state | default("present") == "absent"
 
 # - name: Creates a cron file under /etc/cron.d
 #   ansible.builtin.cron:
@@ -35,7 +33,6 @@
 #     user: root
 #     job: "YUMINTERACTIVE=0 /usr/sbin/yum-autoupdate"
 #     cron_file: ansible_yum-autoupdate
-
 
 # - name: Removes a cron file from under /etc/cron.d
 #   ansible.builtin.cron:
