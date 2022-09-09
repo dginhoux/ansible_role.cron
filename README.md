@@ -13,8 +13,7 @@ This role is built to only run on platforms defined in `meta/main.yml`
 Role Variables
 --------------
 
-
-```
+```yaml
 cron:
   - file: test
     state: present
