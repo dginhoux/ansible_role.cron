@@ -1,7 +1,8 @@
 {% set repoowner = role_meta_vars['galaxy_info']['company'] -%}
 {% set reponame = "ansible_role." ~ rolename -%}
+{% set repourl = "https://github.com/" ~ repoowner ~ "/" ~ reponame -%}
 
-# {{rolename}}
+# {{ rolename }}
 
 {% if repoowner != '' or reponame != "" %}[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ repoowner }}-e00000?style=flat-square)](https://www.{{ repoowner }}.fr/)
 [![License](https://img.shields.io/github/license/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/blob/main/LICENSE)
@@ -10,7 +11,7 @@
 [![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/{{ repoowner }}/{{ role_meta_vars['galaxy_info']['role_name'] }}){% endif %}
 [![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible)
 
-{{role_meta_vars['galaxy_info']['description']}}
+{{ role_meta_vars['galaxy_info']['description'] }}
 
 **Platforms Supported**:
 
@@ -30,13 +31,13 @@ None.
 
 ## ⚠️ Requirements
 
-Ansible >= {{role_meta_vars['galaxy_info']['min_ansible_version']}}.
+Ansible >= {{ role_meta_vars['galaxy_info']['min_ansible_version'] }}.
 
 ### Ansible role dependencies
 
 {% if role_meta_vars['dependencies'] is defined and role_meta_vars['dependencies']|length() %}
   {% for dependencie in role_meta_vars['dependencies'] %}
-  * {{dependencie}}
+  * {{ dependencie }}
   {% endfor %}
 {% else %}
 None.
@@ -47,7 +48,7 @@ None.
 ### Install with Ansible Galaxy
 
 ```shell
-ansible-galaxy install {{rolename}}
+ansible-galaxy install {{ rolename }}
 ```
 
 ### Install with git
@@ -61,7 +62,7 @@ git clone {{ repourl }} {{ rolename }}
 But I often add it as a submodule in a given `playbook_dir` repository.
 
 ```bash
-git submodule add {{ repourl }} roles/{{rolename}}
+git submodule add {{ repourl }} roles/{{ rolename }}
 ```
 
 As the role is not managed by Ansible Galaxy, you do not have to specify the
@@ -74,7 +75,7 @@ Basic usage is:
 ```yaml
 - hosts: all
   roles:
-    - role: {{rolename}}
+    - role: {{ rolename }}
 {% if role_defaults_files |length > 0 and role_defaults_files[0]['content'] is not none %}
       vars:
   {% for string_role_defaults_file in string_role_defaults_files %}
@@ -165,7 +166,6 @@ None.
       {% endif %}
     {% endfor %}
   {% endif %}
-
 {% endif %}
 
 ## Author Information
