@@ -11,9 +11,9 @@
 # :computer: ROLE {{ role_company }}.{{ role_name }}
 
 {% if role_meta_vars['galaxy_info']['galaxy_tags'] is defined and role_meta_vars['galaxy_info']['galaxy_tags']|length() %}
-  {% for tag in role_meta_vars['galaxy_info']['galaxy_tags'] %}
+  `{% for tag in role_meta_vars['galaxy_info']['galaxy_tags'] %}
   {{ tag }} 
-  {% endfor %}
+  {% endfor %}`
 {% endif %}
 
 
