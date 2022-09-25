@@ -7,7 +7,7 @@ This ansible role configure cron and create files in `/etc/cron.d`
 
 ## :nut_and_bolt: REQUIREMENTS
 
-### SUPPORTED PLATFORMS
+#### SUPPORTED PLATFORMS
 
 This role require a supported platform. 
 It will skip node with unsupported platform to avoid any compatibility problem.
@@ -20,12 +20,12 @@ This behaviour can be bypassed by settings this variable `asserts_bypass=True`.
 | EL | 7, 8 |
 
 
-### ANSIBLE VERSION
+#### ANSIBLE VERSION
 
 Ansible >= 2.12
 
 
-### DEPENDENCIES
+#### DEPENDENCIES
 
 None.
 
