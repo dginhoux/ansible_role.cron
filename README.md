@@ -106,11 +106,9 @@ Variables loaded from `vars/main.yml` :
 
 ## :man: AUTHOR
 
-Dany GINHOUX
-
-[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
+[![Maintainer](https://img.shields.io/badge/maintained%20by-Dany GINHOUX-e00000?style=flat-square)](https://github.com/dginhoux)
 
 
-## :man: LICENSE
+## :bookmark_tabs: LICENSE
 
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
