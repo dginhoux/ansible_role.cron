@@ -23,5 +23,7 @@ galaxy_info:
         - "8"
   galaxy_tags:
     - cron
+    - a
+    - b
 
 dependencies: []
