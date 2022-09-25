@@ -35,7 +35,7 @@ Ansible >= 2.12
 None.
 
 
-## ⚡ Installation
+## :inbox_tray: Installation
 
 ### Install with Ansible Galaxy
 
