@@ -1,13 +1,18 @@
 [![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
 
+
 # dginhoux.cron
 
-**Role description**:
+
+## Role description
 
 This ansible role configure cron and create files in `/etc/cron.d`
 
-**Platforms Supported**:
+
+## ⚠️ Requirements
+
+### Supported platforms
 
 This role require a supported platform. 
 It will skip node with unsupported platform to avoid any compatibility problem.
@@ -19,13 +24,16 @@ This behaviour can be bypassed by settings this variable `asserts_bypass=True`.
 | Fedora | 33, 34, 35, 36 |
 | EL | 7, 8 |
 
-## ⚠️ Requirements
 
-Ansible >= 2.12.
+### Ansible version
 
-### Ansible role dependencies
+Ansible >= 2.12
+
+
+### Role dependencies
 
 None.
+
 
 ## ⚡ Installation
 
@@ -43,7 +51,7 @@ If you do not want a global installation, clone it into your `roles_path`.
 git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
-But I often add it as a submodule in a given `playbook_dir` repository.
+But I often add it as a submodule in a given `roles_path` repository.
 
 ```bash
 git submodule add https://github.com/dginhoux/ansible_role.cron roles/dginhoux.cron
@@ -51,6 +59,10 @@ git submodule add https://github.com/dginhoux/ansible_role.cron roles/dginhoux.c
 
 As the role is not managed by Ansible Galaxy, you do not have to specify the
 github user account.
+
+
+
+## Usage
 
 ### ✏️ Example Playbook
 
@@ -79,6 +91,7 @@ Basic usage is:
         
 ```
 
+
 ## ⚙️ Role Variables
 
 Variables are divided in three types.
@@ -104,6 +117,8 @@ Those variables are located in `vars/*.yml` are used to handle OS differences ; 
 runtime using the `include_vars` module and set OS specifics variable's.
 
 Variables loaded from `vars/main.yml` : 
+
+
 
 
 
