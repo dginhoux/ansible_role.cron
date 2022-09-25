@@ -79,7 +79,20 @@ Role default variables from `defaults/main.yml` :
 
 | Variable Name | Value |
 |---------------|-------|
-| cron | ```yaml- file: hello<br>  state: present<br>  tasks:<br>  - cmdline: echo 'hello'<br>    day: '*'<br>    hour: '6'<br>    minute: '05'<br>    month: '*'<br>    name: say_hello<br>    state: present<br>    user: www-data<br>    weekday: '*'<br>``` |
+| cron | ```yaml- file: hello
+  state: present
+  tasks:
+  - cmdline: echo 'hello'
+    day: '*'
+    hour: '6'
+    minute: '05'
+    month: '*'
+    name: say_hello
+    state: present
+    user: www-data
+    weekday: '*'
+``` |
+
 
 
 #### CONTEXT VARIABLES
