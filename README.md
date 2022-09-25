@@ -1,11 +1,5 @@
 # :computer: ROLE dginhoux.cron
 
-  `  cron 
-  a 
-  b 
-`
-
-
 ## :scroll: DESCRIPTION
 
 This ansible role configure cron and create files in `/etc/cron.d`
