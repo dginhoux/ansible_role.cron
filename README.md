@@ -60,7 +60,9 @@ Basic usage is:
 ```yaml
 - hosts: all
   roles:
-    - role: dginhoux.cron
+    - name: start role dginhoux.cron
+      ansible.builtin.include_role:
+        name: dginhoux.cron
       vars:
         cron:
           - file: hello

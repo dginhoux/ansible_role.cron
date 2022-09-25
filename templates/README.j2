@@ -75,7 +75,9 @@ Basic usage is:
 ```yaml
 - hosts: all
   roles:
-    - role: {{ rolename }}
+    - name: start role {{ rolename }}
+      ansible.builtin.include_role:
+        name: {{ rolename }}
 {% if role_defaults_files |length > 0 and role_defaults_files[0]['content'] is not none %}
       vars:
   {% for string_role_defaults_file in string_role_defaults_files %}
