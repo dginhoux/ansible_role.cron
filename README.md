@@ -1,7 +1,7 @@
 # dginhoux.cron
 
 [![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://www.dginhoux.fr/)
-[![License](https://img.shields.io/github/license/dginhoux/ansible_role.dginhoux.cron?style=flat-square)](https://raw.githubusercontent.com/dginhoux/ansible_role.dginhoux.cron/master/LICENSE)
+[![License](https://img.shields.io/github/license/dginhoux/ansible_role.dginhoux.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.dginhoux.cron/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/dginhoux/ansible_role.dginhoux.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.dginhoux.cron/releases)
 [![Status](https://img.shields.io/github/workflow/status/dginhoux/ansible_role.dginhoux.cron/Ansible%20Molecule?style=flat-square&label=tests)](https://github.com/dginhoux/ansible_role.dginhoux.cron/actions?query=workflow%3A%22Ansible+Molecule%22)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/dginhoux/)[![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible)
