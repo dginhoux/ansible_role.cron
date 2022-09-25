@@ -1,7 +1,9 @@
-# cron
-
 [![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
+
+# dginhoux.cron
+
+**Role description**:
 
 This ansible role configure cron and create files in `/etc/cron.d`
 
@@ -30,7 +32,7 @@ None.
 ### Install with Ansible Galaxy
 
 ```shell
-ansible-galaxy install cron
+ansible-galaxy install dginhoux.cron
 ```
 
 ### Install with git
@@ -38,13 +40,13 @@ ansible-galaxy install cron
 If you do not want a global installation, clone it into your `roles_path`.
 
 ```bash
-git clone https://github.com/dginhoux/ansible_role.cron cron
+git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
 But I often add it as a submodule in a given `playbook_dir` repository.
 
 ```bash
-git submodule add https://github.com/dginhoux/ansible_role.cron roles/cron
+git submodule add https://github.com/dginhoux/ansible_role.cron roles/dginhoux.cron
 ```
 
 As the role is not managed by Ansible Galaxy, you do not have to specify the
@@ -57,9 +59,9 @@ Basic usage is:
 ```yaml
 - hosts: all
   roles:
-    - name: start role cron
+    - name: start role dginhoux.cron
       ansible.builtin.include_role:
-        name: cron
+        name: dginhoux.cron
       vars:
         cron:
           - file: hello
