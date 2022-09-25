@@ -4,16 +4,7 @@
 {% set reponame = repoprefix ~ "." ~ rolename -%}
 {% set repourl = "https://github.com/" ~ repoowner ~ "/" ~ reponame -%}
 
-{#
-{% if repoowner != '' or reponame != "" -%}
-[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ repoowner }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
-[![License](https://img.shields.io/github/license/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/blob/{{ repobranch }}/LICENSE)
-{# [![Release](https://img.shields.io/github/v/release/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/releases) #}
-{# [![Status](https://img.shields.io/github/workflow/status/{{ repoowner }}/{{ reponame }}/Ansible%20Molecule?style=flat-square&label=tests)](https://github.com/{{ repoowner }}/{{ reponame }}/actions?query=workflow%3A%22Ansible+Molecule%22) #}
-{# [![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/{{ repoowner }}/{{ role_meta_vars['galaxy_info']['role_name'] }}) #}
-{% endif -%}
-{# [![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible) #}
-#}
+
 
 # :computer: ROLE {{ repoowner }}.{{ rolename }}
 
@@ -162,8 +153,7 @@ None.
   {% endif %}
 {% endif %}
 
-{# {% if role_meta_vars['galaxy_info']['license'] is defined %} #}
-
+{% if role_meta_vars['galaxy_info']['license'] is defined %}
 {# usage guide // doc from md files #}
   {% if role_docs_md_files is not none %}
     {% for role_docs_md_file in role_docs_md_files %}

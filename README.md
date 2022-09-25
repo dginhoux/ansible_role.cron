@@ -1,18 +1,14 @@
-[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
-[![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
+# :computer: ROLE dginhoux.cron
 
 
-# :computer: dginhoux.cron
-
-
-## :scroll: Role description
+## :scroll: DESCRIPTION
 
 This ansible role configure cron and create files in `/etc/cron.d`
 
 
-## :nut_and_bolt: Requirements
+## :nut_and_bolt: REQUIREMENTS
 
-### Supported platforms
+### SUPPORTED PLATFORMS
 
 This role require a supported platform. 
 It will skip node with unsupported platform to avoid any compatibility problem.
@@ -25,34 +21,34 @@ This behaviour can be bypassed by settings this variable `asserts_bypass=True`.
 | EL | 7, 8 |
 
 
-### Ansible version
+### ANSIBLE VERSION
 
 Ansible >= 2.12
 
 
-### Role dependencies
+### DEPENDENCIES
 
 None.
 
 
-## :inbox_tray: Installation
+## :inbox_tray: INSTALLATION
 
-### Install with Ansible Galaxy
+### ANSIBLE GALAXY
 
 ```shell
 ansible-galaxy install dginhoux.cron
 ```
 
-### Install with git
+### GIT
 
 ```shell
 git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
 
-## :rocket: Usage
+## :rocket: USAGE
 
-### Example playbook
+### EXAMPLE PLAYBOOK
 
 ```yaml
 - hosts: all
@@ -78,7 +74,7 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
 
-## :factory: Role Variables
+## :factory: VARIABLES
 
 Variables are divided in three types.
 
@@ -90,14 +86,14 @@ role manageability.
 The **context variables** are shown in section below hint you
 on how runtime context may affects role execution.
 
-### Default variables
+### DEFAULT VARIABLES
 Role default variables from `defaults/main.yml` : 
 
 | Variable Name | Value |
 |---------------|-------|
 | cron | - file: hello<br>  state: present<br>  tasks:<br>  - cmdline: echo 'hello'<br>    day: '*'<br>    hour: '6'<br>    minute: '05'<br>    month: '*'<br>    name: say_hello<br>    state: present<br>    user: www-data<br>    weekday: '*'<br> |
 
-### Context variables
+### CONTEXT VARIABLES
 
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
 runtime using the `include_vars` module and set OS specifics variable's.
@@ -108,7 +104,13 @@ Variables loaded from `vars/main.yml` :
 
 
 
-
-## :man: Author
+## :man: AUTHOR
 
 Dany GINHOUX
+
+[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
+
+
+## :man: LICENSE
+
+[![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
