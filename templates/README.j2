@@ -1,13 +1,20 @@
-{% set author = role_meta_vars['galaxy_info']['author'] -%}
-{% set repoowner = role_meta_vars['galaxy_info']['company'] -%}
-{% set repoprefix = "ansible_role" -%}
-{% set repobranch = "master" -%}
-{% set reponame = repoprefix ~ "." ~ rolename -%}
-{% set repourl = "https://github.com/" ~ repoowner ~ "/" ~ reponame -%}
+{% set role_name = role_meta_vars['galaxy_info']['role_name'] -%}
+{% set role_author = role_meta_vars['galaxy_info']['author'] -%}
+{% set role_company = role_meta_vars['galaxy_info']['company'] -%}
+{% set repo_prefix = "ansible_role" -%}
+{% set repo_branch = "master" -%}
+{% set repo_name = repo_prefix ~ "." ~ role_name -%}
+{% set repo_url = "https://github.com/" ~ role_company ~ "/" ~ repo_name -%}
 
 
 
-# :computer: ROLE {{ repoowner }}.{{ rolename }}
+# :computer: ROLE {{ role_company }}.{{ role_name }}
+
+{% if role_meta_vars['galaxy_info']['galaxy_tags'] is defined and role_meta_vars['galaxy_info']['galaxy_tags']|length() %}
+  {% for tag in role_meta_vars['galaxy_info']['galaxy_tags'] %}
+  * {{ tag }}
+  {% endfor %}
+{% endif %}
 
 
 ## :scroll: DESCRIPTION
@@ -55,13 +62,13 @@ None.
 ### ANSIBLE GALAXY
 
 ```shell
-ansible-galaxy install {{ repoowner }}.{{ rolename }}
+ansible-galaxy install {{ role_company }}.{{ role_name }}
 ```
 
 ### GIT
 
 ```shell
-git clone {{ repourl }} {{ repoowner }}.{{ rolename }}
+git clone {{ repo_url }} {{ role_company }}.{{ role_name }}
 ```
 
 
@@ -72,9 +79,9 @@ git clone {{ repourl }} {{ repoowner }}.{{ rolename }}
 ```yaml
 - hosts: all
   roles:
-    - name: start role {{ repoowner }}.{{ rolename }}
+    - name: start role {{ role_company }}.{{ role_name }}
       ansible.builtin.include_role:
-        name: {{ repoowner }}.{{ rolename }}
+        name: {{ role_company }}.{{ role_name }}
 {% if role_defaults_files |length > 0 and role_defaults_files[0]['content'] is not none %}
       vars:
   {% for string_role_defaults_file in string_role_defaults_files %}
@@ -171,9 +178,9 @@ None.
 
 ## :man: AUTHOR
 
-[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ author }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
+[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ role_company }}-e00000?style=flat-square)](https://github.com/{{ role_company }})
 
 
 ## :bookmark_tabs: LICENSE
 
-[![License](https://img.shields.io/github/license/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/blob/{{ repobranch }}/LICENSE)
+[![License](https://img.shields.io/github/license/{{ role_company }}/{{ repo_name }}?style=flat-square)](https://github.com/{{ role_company }}/{{ repo_name }}/blob/{{ repo_branch }}/LICENSE)

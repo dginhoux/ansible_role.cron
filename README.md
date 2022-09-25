@@ -1,5 +1,7 @@
 # :computer: ROLE dginhoux.cron
 
+  * cron
+
 
 ## :scroll: DESCRIPTION
 
@@ -106,7 +108,7 @@ Variables loaded from `vars/main.yml` :
 
 ## :man: AUTHOR
 
-[![Maintainer](https://img.shields.io/badge/maintained%20by-Dany GINHOUX-e00000?style=flat-square)](https://github.com/dginhoux)
+[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
 
 
 ## :bookmark_tabs: LICENSE
