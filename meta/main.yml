@@ -4,7 +4,7 @@ galaxy_info:
   description: This ansible role configure cron and create files in `/etc/cron.d`
   author: Dany GINHOUX
   company: dginhoux
-  license: BSD
+  license: MIT
   min_ansible_version: "2.12"
   platforms:
     - name: Debian

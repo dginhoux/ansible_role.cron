@@ -93,7 +93,7 @@ The **context variables** are shown in section below hint you
 on how runtime context may affects role execution.
 
 ### Default variables
-Role default variables from `defaults/main.yml`.
+Role default variables from `defaults/main.yml` : 
 
 | Variable Name | Value |
 |---------------|-------|
@@ -101,10 +101,10 @@ Role default variables from `defaults/main.yml`.
 
 ### Context variables
 
-Those variables from `vars/*.yml` are loaded dynamically during task
-runtime using the `include_vars` module.
+Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
+runtime using the `include_vars` module and set OS specifics variable's.
 
-Variables loaded from `vars/main.yml`.
+Variables loaded from `vars/main.yml` : 
 
 
 

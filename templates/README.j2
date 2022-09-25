@@ -121,7 +121,7 @@ on how runtime context may affects role execution.
       {% endfor %}
     {% else %}
       {% for role_defaults_file in role_defaults_files %}
-Role default variables from `defaults/{{role_defaults_file['filename']}}`.
+Role default variables from `defaults/{{role_defaults_file['filename']}}` : 
 
         {% if role_defaults_file['content'] != None %}
 | Variable Name | Value |
@@ -137,11 +137,11 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}`.
 ### Context variables
 
 {% if role_vars_files != [] %}
-Those variables from `vars/*.yml` are loaded dynamically during task
-runtime using the `include_vars` module.
+Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
+runtime using the `include_vars` module and set OS specifics variable's.
   {% for role_vars_file in role_vars_files %}
 
-Variables loaded from `vars/{{role_vars_file['filename']}}`.
+Variables loaded from `vars/{{role_vars_file['filename']}}` : 
 
     {% if role_vars_file['content'] != None %}
 | Variable Name | Value |
