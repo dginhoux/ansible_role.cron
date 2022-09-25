@@ -1,3 +1,4 @@
+{% set author = role_meta_vars['galaxy_info']['author'] -%}
 {% set repoowner = role_meta_vars['galaxy_info']['company'] -%}
 {% set repoprefix = "ansible_role" -%}
 {% set repobranch = "master" -%}
@@ -170,7 +171,7 @@ None.
 
 ## :man: AUTHOR
 
-[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ role_meta_vars['galaxy_info']['author'] }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
+[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ author }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
 
 
 ## :bookmark_tabs: LICENSE
