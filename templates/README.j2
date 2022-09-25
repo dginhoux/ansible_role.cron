@@ -59,13 +59,13 @@ None.
 
 ## :inbox_tray: INSTALLATION
 
-### ANSIBLE GALAXY
+#### ANSIBLE GALAXY
 
 ```shell
 ansible-galaxy install {{ role_company }}.{{ role_name }}
 ```
 
-### GIT
+#### GIT
 
 ```shell
 git clone {{ repo_url }} {{ role_company }}.{{ role_name }}
@@ -74,7 +74,7 @@ git clone {{ repo_url }} {{ role_company }}.{{ role_name }}
 
 ## :rocket: USAGE
 
-### EXAMPLE PLAYBOOK
+#### EXAMPLE PLAYBOOK
 
 ```yaml
 - hosts: all
@@ -106,7 +106,7 @@ The **context variables** are shown in section below hint you
 on how runtime context may affects role execution.
 
   {% if role_defaults_files is not none or role_spec_vars is not none %}
-### DEFAULT VARIABLES
+#### DEFAULT VARIABLES
     {% if role_spec_vars is not none %}
       {% for name,specs in role_spec_vars.items() %}
 
@@ -139,7 +139,7 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}` :
     {% endif %}
   {% endif %}
 
-### CONTEXT VARIABLES
+#### CONTEXT VARIABLES
 
 {% if role_vars_files != [] %}
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
@@ -178,7 +178,7 @@ None.
 
 ## :man: AUTHOR
 
-[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ role_company }}-e00000?style=flat-square)](https://github.com/{{ role_company }})
+[![Author](https://img.shields.io/badge/maintained%20by-{{ role_company }}-e00000?style=flat-square)](https://github.com/{{ role_company }})
 
 
 ## :bookmark_tabs: LICENSE
