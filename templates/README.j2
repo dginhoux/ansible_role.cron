@@ -94,7 +94,7 @@ git clone {{ repo_url }} {{ role_company }}.{{ role_name }}
 {# role vars #}
 {% if role_vars_files is not none or role_defaults_files is not none or role_spec_vars is not none %}
 ## :factory: VARIABLES
-
+{#
 Variables are divided in three types.
 
 The **default vars** section shows you which variables you may
@@ -104,7 +104,7 @@ role manageability.
 
 The **context variables** are shown in section below hint you
 on how runtime context may affects role execution.
-
+#}
   {% if role_defaults_files is not none or role_spec_vars is not none %}
 #### DEFAULT VARIABLES
     {% if role_spec_vars is not none %}
@@ -146,9 +146,10 @@ Those variables are located in `vars/*.yml` are used to handle OS differences ; 
 runtime using the `include_vars` module and set OS specifics variable's.
   {% for role_vars_file in role_vars_files %}
 
-Variables loaded from `vars/{{role_vars_file['filename']}}` : 
 
     {% if role_vars_file['content'] != None %}
+Variables loaded from `vars/{{role_vars_file['filename']}}` : 
+
 | Variable Name | Value |
 |---------------|-------|
       {% for key,value in role_vars_file['content'].items() %}

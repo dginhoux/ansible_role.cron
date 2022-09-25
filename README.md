@@ -74,17 +74,6 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 
 
 ## :factory: VARIABLES
-
-Variables are divided in three types.
-
-The **default vars** section shows you which variables you may
-override in your ansible inventory. As a matter of fact, all variables should
-be defined there for explicitness, ease of documentation as well as overall
-role manageability.
-
-The **context variables** are shown in section below hint you
-on how runtime context may affects role execution.
-
 #### DEFAULT VARIABLES
 Role default variables from `defaults/main.yml` : 
 
@@ -97,7 +86,6 @@ Role default variables from `defaults/main.yml` :
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
 runtime using the `include_vars` module and set OS specifics variable's.
 
-Variables loaded from `vars/main.yml` : 
 
 
 
