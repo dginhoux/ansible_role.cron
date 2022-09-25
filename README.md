@@ -79,13 +79,13 @@ Role default variables from `defaults/main.yml` :
 
 | Variable Name | Value |
 |---------------|-------|
-| cron | - file: hello<br>  state: present<br>  tasks:<br>  - cmdline: echo 'hello'<br>    day: '*'<br>    hour: '6'<br>    minute: '05'<br>    month: '*'<br>    name: say_hello<br>    state: present<br>    user: www-data<br>    weekday: '*'<br> |
+| cron | ```yaml- file: hello<br>  state: present<br>  tasks:<br>  - cmdline: echo 'hello'<br>    day: '*'<br>    hour: '6'<br>    minute: '05'<br>    month: '*'<br>    name: say_hello<br>    state: present<br>    user: www-data<br>    weekday: '*'<br>``` |
+
 
 #### CONTEXT VARIABLES
 
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
 runtime using the `include_vars` module and set OS specifics variable's.
-
 
 
 
