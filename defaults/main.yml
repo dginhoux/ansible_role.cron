@@ -1,16 +1,16 @@
 ---
-# cron:
-#   - file: test
-#     state: present
-#     tasks:
-#       - name: hello
-#         state: present
-#         user: www-data
-#         minute: "*/5"
-#         hour: *
-#         day: *
-#         month: *
-#         weekday: *
-#         cmdline: echo 'hello'
+cron:
+  - file: hello
+    state: present
+    tasks:
+      - name: say_hello
+        state: present
+        user: www-data
+        minute: "05"
+        hour: "6"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        cmdline: echo 'hello'
 
-cron: []
+# cron: []
