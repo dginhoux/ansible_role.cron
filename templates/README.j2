@@ -1,6 +1,7 @@
 {% set repoowner = role_meta_vars['galaxy_info']['company'] -%}
-{% set reponame = "ansible_role." ~ rolename -%}
+{% set repoprefix = "ansible_role" -%}
 {% set repobranch = "master" -%}
+{% set reponame = repoprefix ~ "." ~ rolename -%}
 {% set repourl = "https://github.com/" ~ repoowner ~ "/" ~ reponame -%}
 
 # {{ rolename }}

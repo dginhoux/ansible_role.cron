@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  #  role_name: cron
+  role_name: cron
   description: This ansible role configure cron and create files in `/etc/cron.d`
   author: Dany GINHOUX
   company: dginhoux
