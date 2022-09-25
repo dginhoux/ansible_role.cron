@@ -2,15 +2,15 @@
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
 
 
-# dginhoux.cron
+# :computer: dginhoux.cron
 
 
-## Role description
+## :scroll: Role description
 
 This ansible role configure cron and create files in `/etc/cron.d`
 
 
-## ⚠️ Requirements
+## :nut_and_bolt: Requirements
 
 ### Supported platforms
 
@@ -45,28 +45,14 @@ ansible-galaxy install dginhoux.cron
 
 ### Install with git
 
-If you do not want a global installation, clone it into your `roles_path`.
-
-```bash
+```shell
 git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
-But I often add it as a submodule in a given `roles_path` repository.
 
-```bash
-git submodule add https://github.com/dginhoux/ansible_role.cron roles/dginhoux.cron
-```
+## :rocket: Usage
 
-As the role is not managed by Ansible Galaxy, you do not have to specify the
-github user account.
-
-
-
-## Usage
-
-### ✏️ Example Playbook
-
-Basic usage is:
+### Example playbook
 
 ```yaml
 - hosts: all
@@ -92,7 +78,7 @@ Basic usage is:
 ```
 
 
-## ⚙️ Role Variables
+## :factory: Role Variables
 
 Variables are divided in three types.
 
@@ -123,6 +109,6 @@ Variables loaded from `vars/main.yml` :
 
 
 
-## Author Information
+## :man: Author
 
 Dany GINHOUX
