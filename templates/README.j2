@@ -4,6 +4,7 @@
 {% set reponame = repoprefix ~ "." ~ rolename -%}
 {% set repourl = "https://github.com/" ~ repoowner ~ "/" ~ reponame -%}
 
+{#
 {% if repoowner != '' or reponame != "" -%}
 [![Maintainer](https://img.shields.io/badge/maintained%20by-{{ repoowner }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
 [![License](https://img.shields.io/github/license/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/blob/{{ repobranch }}/LICENSE)
@@ -12,19 +13,19 @@
 {# [![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/{{ repoowner }}/{{ role_meta_vars['galaxy_info']['role_name'] }}) #}
 {% endif -%}
 {# [![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible) #}
+#}
+
+# :computer: ROLE {{ repoowner }}.{{ rolename }}
 
 
-# :computer: {{ repoowner }}.{{ rolename }}
-
-
-## :scroll: Role description
+## :scroll: DESCRIPTION
 
 {{ role_meta_vars['galaxy_info']['description'] }}
 
 
-## :nut_and_bolt: Requirements
+## :nut_and_bolt: REQUIREMENTS
 
-### Supported platforms
+### SUPPORTED PLATFORMS
 
 {% if role_meta_vars['galaxy_info']['platforms'] is defined and role_meta_vars['galaxy_info']['platforms']|length() %}
 This role require a supported platform. 
@@ -41,12 +42,12 @@ Not defined
 {% endif %}
 
 
-### Ansible version
+### ANSIBLE VERSION
 
 Ansible >= {{ role_meta_vars['galaxy_info']['min_ansible_version'] }}
 
 
-### Role dependencies
+### DEPENDENCIES
 
 {% if role_meta_vars['dependencies'] is defined and role_meta_vars['dependencies']|length() %}
   {% for dependencie in role_meta_vars['dependencies'] %}
@@ -57,24 +58,24 @@ None.
 {% endif %}
 
 
-## :inbox_tray: Installation
+## :inbox_tray: INSTALLATION
 
-### Install with Ansible Galaxy
+### ANSIBLE GALAXY
 
 ```shell
 ansible-galaxy install {{ repoowner }}.{{ rolename }}
 ```
 
-### Install with git
+### GIT
 
 ```shell
 git clone {{ repourl }} {{ repoowner }}.{{ rolename }}
 ```
 
 
-## :rocket: Usage
+## :rocket: USAGE
 
-### Example playbook
+### EXAMPLE PLAYBOOK
 
 ```yaml
 - hosts: all
@@ -93,7 +94,7 @@ git clone {{ repourl }} {{ repoowner }}.{{ rolename }}
 
 {# role vars #}
 {% if role_vars_files is not none or role_defaults_files is not none or role_spec_vars is not none %}
-## :factory: Role Variables
+## :factory: VARIABLES
 
 Variables are divided in three types.
 
@@ -106,7 +107,7 @@ The **context variables** are shown in section below hint you
 on how runtime context may affects role execution.
 
   {% if role_defaults_files is not none or role_spec_vars is not none %}
-### Default variables
+### DEFAULT VARIABLES
     {% if role_spec_vars is not none %}
       {% for name,specs in role_spec_vars.items() %}
 
@@ -139,7 +140,7 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}` :
     {% endif %}
   {% endif %}
 
-### Context variables
+### CONTEXT VARIABLES
 
 {% if role_vars_files != [] %}
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
@@ -161,7 +162,7 @@ None.
   {% endif %}
 {% endif %}
 
-{% if role_meta_vars['galaxy_info']['license'] is defined %}
+{# {% if role_meta_vars['galaxy_info']['license'] is defined %} #}
 
 {# usage guide // doc from md files #}
   {% if role_docs_md_files is not none %}
@@ -177,6 +178,13 @@ None.
 
 
 
-## :man: Author
+## :man: AUTHOR
 
 {{ role_meta_vars['galaxy_info']['author'] }}
+
+[![Maintainer](https://img.shields.io/badge/maintained%20by-{{ repoowner }}-e00000?style=flat-square)](https://github.com/{{ repoowner }})
+
+
+## :man: LICENSE
+
+[![License](https://img.shields.io/github/license/{{ repoowner }}/{{ reponame }}?style=flat-square)](https://github.com/{{ repoowner }}/{{ reponame }}/blob/{{ repobranch }}/LICENSE)
