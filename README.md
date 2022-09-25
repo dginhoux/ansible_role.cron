@@ -1,10 +1,9 @@
 # cron
 
-[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://www.dginhoux.fr/)
+[![Maintainer](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/releases)
-[![Status](https://img.shields.io/github/workflow/status/dginhoux/ansible_role.cron/Ansible%20Molecule?style=flat-square&label=tests)](https://github.com/dginhoux/ansible_role.cron/actions?query=workflow%3A%22Ansible+Molecule%22)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/dginhoux/cron)[![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible)
+[![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible)
 
 This ansible role configure cron and create files in `/etc/cron.d`
 
