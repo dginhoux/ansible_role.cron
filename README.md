@@ -63,7 +63,7 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 
 #### DEFAULT VARIABLES
 
-Defaults variables defined in `defaults/main.yml` : 
+Default variables defined in `defaults/main.yml` : 
 
 ```yaml
 cron:
@@ -80,12 +80,12 @@ cron:
         weekday: "*"
         cmdline: echo 'hello'
 ```
-#### CONTEXT VARIABLES
+#### DEFAULT OS SPECIFIC VARIABLES
 
 Those variables files are located in `vars/*.yml` are used to handle OS differences.<br />
 One of theses is loaded dynamically during role runtime using the `include_vars` module and set OS specifics variable's.
 
-
+NOT USED BY THIS ROLE
 
 ## AUTHOR
 
