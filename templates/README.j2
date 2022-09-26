@@ -131,8 +131,8 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}` :
         {% if role_defaults_file['content'] != None %}
 | Variable Name | Value |
 |---------------|-------|
-          {% for key, value in role_defaults_file['content'].items() %}
-| {{ key }} | <pre> {{ value | tojson  }} </pre> |
+          {% for key, value in role_defaults_file['content'].items() +%}
+| {{ key }} | <pre> {{ value | replace('|',' \|') | replace('\n','<br>') }} </pre> |
           {% endfor %}
         {% endif %}
       {% endfor %}
