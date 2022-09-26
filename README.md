@@ -79,7 +79,7 @@ Role default variables from `defaults/main.yml` :
 
 | Variable Name | Value |
 |---------------|-------|
-| cron | <pre> - file: hello
+| cron | <code><pre> - file: hello
   state: present
   tasks:
   - cmdline: echo 'hello'
@@ -91,7 +91,7 @@ Role default variables from `defaults/main.yml` :
     state: present
     user: www-data
     weekday: '*'
- </pre> |
+ </pre></code> |
 
 
 #### CONTEXT VARIABLES
