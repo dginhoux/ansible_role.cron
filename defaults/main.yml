@@ -12,5 +12,3 @@ cron:
         month: "*"
         weekday: "*"
         cmdline: echo 'hello'
-
-# cron: []
