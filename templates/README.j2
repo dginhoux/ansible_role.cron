@@ -133,7 +133,7 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}` :
 |---------------|-------|
           {% for key, value in role_defaults_file['content'].items() +%}
 |{{ key }} | {{ value | safe | replace('|',' \|') | replace('\n','<br>') }} |
-          {%+ endfor %}
+          {% endfor %}
         {% endif %}
       {% endfor %}
     {% endif %}
