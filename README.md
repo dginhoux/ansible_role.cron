@@ -79,7 +79,6 @@ Role default variables from `defaults/main.yml` :
 
 | Variable Name | Value |
 |---------------|-------|
-
 | cron | <pre> "- file: hello\n  state: present\n  tasks:\n  - cmdline: echo \u0027hello\u0027\n    day: \u0027*\u0027\n    hour: \u00276\u0027\n    minute: \u002705\u0027\n    month: \u0027*\u0027\n    name: say_hello\n    state: present\n    user: www-data\n    weekday: \u0027*\u0027\n" </pre> |
 
 
