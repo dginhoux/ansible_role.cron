@@ -131,10 +131,9 @@ Role default variables from `defaults/{{role_defaults_file['filename']}}` :
         {% if role_defaults_file['content'] != None %}
 | Variable Name | Value |
 |---------------|-------|
-          {% for key,value in role_defaults_file['content'].items() %}
-|{# {{ key }} | ```yaml{{ value|safe|replace('|',' \|')|replace('\n','<br>') }}``` | #}
-| {{ key }} | {% raw %}```yaml{% endraw %} <br /> {{ value }} <br /> {% raw %}```{% endraw %} |
-          {% endfor %}
+          {% for key, value in role_defaults_file['content'].items() +%}
+|{{ key }} | {{ value | safe | replace('|',' \|') | replace('\n','<br>') }} |
+          {%+ endfor %}
         {% endif %}
       {% endfor %}
     {% endif %}
