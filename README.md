@@ -2,7 +2,8 @@
 
 ## :scroll: DESCRIPTION
 
-This ansible role configure cron and create files in `/etc/cron.d`
+This ansible role configure `cron.d` and create tasks files in `/etc/cron.d`
+
 
 
 ## :nut_and_bolt: REQUIREMENTS
