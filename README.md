@@ -1,12 +1,14 @@
-# :computer: ROLE dginhoux.cron
+# ROLE dginhoux.cron
 
-## :scroll: DESCRIPTION
+
+
+## DESCRIPTION
 
 This ansible role configure `cron.d` and create tasks files in `/etc/cron.d`
 
 
 
-## :nut_and_bolt: REQUIREMENTS
+## REQUIREMENTS
 
 #### SUPPORTED PLATFORMS
 
@@ -20,25 +22,23 @@ This behaviour can be bypassed by settings this variable `asserts_bypass=True`.
 | Fedora | 33, 34, 35, 36 |
 | EL | 7, 8 |
 
-
 #### ANSIBLE VERSION
 
 Ansible >= 2.12
-
 
 #### DEPENDENCIES
 
 None.
 
 
-## :inbox_tray: INSTALLATION
+
+## INSTALLATION
 
 #### ANSIBLE GALAXY
 
 ```shell
 ansible-galaxy install dginhoux.cron
 ```
-
 #### GIT
 
 ```shell
@@ -46,7 +46,7 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```
 
 
-## :rocket: USAGE
+## USAGE
 
 #### EXAMPLE PLAYBOOK
 
@@ -56,33 +56,28 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
     - name: start role dginhoux.cron
       ansible.builtin.include_role:
         name: dginhoux.cron
-      vars:
-        cron:
-          - file: hello
-            state: present
-            tasks:
-              - cmdline: echo 'hello'
-                day: '*'
-                hour: '6'
-                minute: '05'
-                month: '*'
-                name: say_hello
-                state: present
-                user: www-data
-                weekday: '*'
-        
 ```
 
 
-## :factory: VARIABLES
+## VARIABLES
+
 #### DEFAULT VARIABLES
 Role default variables from `defaults/main.yml` : 
-
-| Variable Name | Value |
-|---------------|-------|
-|cron | <pre> - file: hello<br>  state: present<br>  tasks:<br>  - cmdline: echo 'hello'<br>    day: '*'<br>    hour: '6'<br>    minute: '05'<br>    month: '*'<br>    name: say_hello<br>    state: present<br>    user: www-data<br>    weekday: '*'<br> </pre> |
-
-
+```yaml
+cron:
+  - file: hello
+    state: present
+    tasks:
+      - name: say_hello
+        state: present
+        user: www-data
+        minute: "05"
+        hour: "6"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        cmdline: echo 'hello'
+```
 #### CONTEXT VARIABLES
 
 Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
@@ -90,13 +85,12 @@ runtime using the `include_vars` module and set OS specifics variable's.
 
 
 
-
-
-## :man: AUTHOR
+## AUTHOR
 
 [![Author](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
 
 
-## :bookmark_tabs: LICENSE
+
+## LICENSE
 
 [![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
