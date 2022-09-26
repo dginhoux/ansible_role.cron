@@ -89,10 +89,10 @@ One of theses is loaded dynamically during role runtime using the `include_vars`
 
 ## AUTHOR
 
-[![Author](https://img.shields.io/badge/maintained%20by-dginhoux-e00000?style=flat-square)](https://github.com/dginhoux)
+Dany GINHOUX - https://github.com/dginhoux
 
 
 
 ## LICENSE
 
-[![License](https://img.shields.io/github/license/dginhoux/ansible_role.cron?style=flat-square)](https://github.com/dginhoux/ansible_role.cron/blob/master/LICENSE)
+MIT
