@@ -12,9 +12,9 @@ This ansible role configure `cron.d` and create tasks files in `/etc/cron.d`
 
 #### SUPPORTED PLATFORMS
 
-This role require a supported platform. 
-It will skip node with unsupported platform to avoid any compatibility problem.
-This behaviour can be bypassed by settings this variable `asserts_bypass=True`.
+This role require a supported platform.<br />
+It will skip node with unsupported platform to avoid any compatibility problem.<br />
+This behaviour can be bypassed by settings the following variable `asserts_bypass=True`.
 
 | Platform | Versions |
 |----------|----------|
@@ -62,7 +62,9 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ## VARIABLES
 
 #### DEFAULT VARIABLES
-Role default variables from `defaults/main.yml` : 
+
+Defaults variables defined in `defaults/main.yml` : 
+
 ```yaml
 cron:
   - file: hello
@@ -80,8 +82,8 @@ cron:
 ```
 #### CONTEXT VARIABLES
 
-Those variables are located in `vars/*.yml` are used to handle OS differences ; One of theses is loaded dynamically during role
-runtime using the `include_vars` module and set OS specifics variable's.
+Those variables files are located in `vars/*.yml` are used to handle OS differences.<br />
+One of theses is loaded dynamically during role runtime using the `include_vars` module and set OS specifics variable's.
 
 
 
