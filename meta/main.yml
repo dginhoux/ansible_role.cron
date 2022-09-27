@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: cron
   description: |
-    This ansible role configure `cron.d` and create tasks files in `/etc/cron.d`.
+    This ansible role configure `cron` and create tasks files in `/etc/cron.d`.
   author: Dany GINHOUX
   company: dginhoux
   license: MIT
