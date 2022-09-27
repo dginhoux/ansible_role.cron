@@ -7,7 +7,6 @@
 This ansible role configure `cron` and create tasks files in `/etc/cron.d`.
 
 
-
 ## REQUIREMENTS
 
 #### SUPPORTED PLATFORMS
