@@ -1,5 +1,5 @@
 ---
-- name: add cron.d file(s)
+- name: Add cron.d file(s)
   ansible.builtin.template:
     src: cron.j2
     dest: /etc/cron.d/{{ item.file }}
@@ -12,7 +12,7 @@
     and
     item.state | default("present") == "present"
 
-- name: delete cron.d file(s)
+- name: Delete cron.d file(s)
   ansible.builtin.file:
     path: /etc/cron.d/{{ item.file }}
     state: absent
