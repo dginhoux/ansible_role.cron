@@ -1,14 +1,18 @@
 ---
-cron:
-  - file: hello
-    state: present
-    tasks:
-      - name: say_hello
-        state: present
-        user: www-data
-        minute: "05"
-        hour: "6"
-        day: "*"
-        month: "*"
-        weekday: "*"
-        cmdline: echo 'hello'
+cron_list:
+  # - file: hello
+  #   state: present
+  #   tasks:
+  #     - name: say_hello
+  #       state: present
+  #       user: www-data
+  #       minute: "05"
+  #       hour: "6"
+  #       day: "*"
+  #       month: "*"
+  #       weekday: "*"
+  #       cmdline: echo 'hello'
+
+cron_list: []
+cron_list_host: []
+cron_list_group: []

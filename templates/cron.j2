@@ -10,8 +10,8 @@
 # |   |   |   |   |
 # *   *   *   *   *      user            command
 
-{% if item.tasks is defined and item.tasks | length > 0 %}
-{% for v in item.tasks %}
+{% if cron.tasks is defined and cron.tasks | length > 0 %}
+{% for v in cron.tasks %}
 {% if v.name is defined %}
 # task: {{ v.name }}
 {% endif %}
