@@ -2,7 +2,6 @@
 
 
 
-
 ## DESCRIPTION
 
 This ansible role configure `cron` and create tasks files in `/etc/cron.d`.
