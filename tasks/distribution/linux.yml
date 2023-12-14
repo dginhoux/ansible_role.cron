@@ -1,5 +1,6 @@
 ---
 - name: Add cron.d file(s)
+  become: true
   tags:
     - present
   when:
@@ -20,6 +21,7 @@
     mode: "0644"
 
 - name: Delete cron.d file(s)
+  become: true
   tags:
     - absent
   when:
