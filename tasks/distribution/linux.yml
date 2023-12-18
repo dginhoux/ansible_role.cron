@@ -1,23 +1,24 @@
 ---
+
 - name: Add cron.d file(s)
   become: true
   tags:
     - present
   when:
-    cron_list is defined
-    cron_list is iterable
-    cron_list_host is defined
-    cron_list_host is iterable
-    cron_list_group is defined
-    cron_list_group is iterable
-    cron.state == "present"
+    - cron_list is defined
+    - cron_list is iterable
+    - cron_list_host is defined
+    - cron_list_host is iterable
+    - cron_list_group is defined
+    - cron_list_group is iterable
+    - cron.state == "present"
   loop: "{{ cron_list + cron_list_host + cron_list_group | flatten(levels=1) }}"
   loop_control:
     loop_var: cron
     label: "cron: {{ cron.file }}"
   ansible.builtin.template:
     src: cron.j2
-    dest: /etc/cron.d/{{ cron.file }}
+    dest: "/etc/cron.d/{{ cron.file }}"
     mode: "0644"
 
 - name: Delete cron.d file(s)
@@ -25,17 +26,17 @@
   tags:
     - absent
   when:
-    cron_list is defined
-    cron_list is iterable
-    cron_list_host is defined
-    cron_list_host is iterable
-    cron_list_group is defined
-    cron_list_group is iterable
-    cron.state == "absent"
+    - cron_list is defined
+    - cron_list is iterable
+    - cron_list_host is defined
+    - cron_list_host is iterable
+    - cron_list_group is defined
+    - cron_list_group is iterable
+    - cron.state == "absent"
   loop: "{{ cron_list + cron_list_host + cron_list_group | flatten(levels=1) }}"
   loop_control:
     loop_var: cron
     label: "cron: {{ cron.file }}"
   ansible.builtin.file:
-    path: /etc/cron.d/{{ cron.file }}
+    path: "/etc/cron.d/{{ cron.file }}"
     state: absent
