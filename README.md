@@ -49,7 +49,8 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 #### EXAMPLE PLAYBOOK
 
 ```yaml
-- hosts: all
+- name: Playbook
+  hosts: all
   roles:
     - name: start role dginhoux.cron
       ansible.builtin.include_role:
@@ -64,7 +65,7 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 Default variables defined in `defaults/main.yml` : 
 
 ```yaml
-cron:
+cron_list:
   - file: hello
     state: present
     tasks:
@@ -77,7 +78,14 @@ cron:
         month: "*"
         weekday: "*"
         cmdline: echo 'hello'
+cron_list_group: []
+cron_list_host: []
 ```
+
+NOTE : Theses 3 lists `cron_list`, `cron_list_group` and `cron_list_host` are merged. <br />
+You can use the host and group lists to specify users per host or group off hosts.
+
+
 #### DEFAULT OS SPECIFIC VARIABLES
 
 Those variables files are located in `vars/*.yml` are used to handle OS differences.<br />
