@@ -51,7 +51,7 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 ```yaml
 - name: Playbook
   hosts: all
-  roles:
+  tasks:
     - name: start role dginhoux.cron
       ansible.builtin.include_role:
         name: dginhoux.cron
@@ -62,7 +62,9 @@ git clone https://github.com/dginhoux/ansible_role.cron dginhoux.cron
 
 #### DEFAULT VARIABLES
 
-Default variables defined in `defaults/main.yml` : 
+Default variables defined in `defaults/main.yml`
+
+#### EXAMPLES VARIABLES
 
 ```yaml
 cron_list:
