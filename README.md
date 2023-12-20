@@ -83,7 +83,7 @@ cron_list_host: []
 ```
 
 NOTE : Theses 3 lists `cron_list`, `cron_list_group` and `cron_list_host` are merged. <br />
-You can use the host and group lists to specify users per host or group off hosts.
+You can use the `_host` and `_group` lists to specify per host and/or per group content.
 
 
 #### DEFAULT OS SPECIFIC VARIABLES
